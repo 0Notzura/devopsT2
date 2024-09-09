@@ -15,6 +15,7 @@ spec:
       containers:
       - name: frontend
         image: devops/front:latest
+        imagePullPolicy: Never  
         ports:
         - containerPort: 80
 
