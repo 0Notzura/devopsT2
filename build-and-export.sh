@@ -1,14 +1,16 @@
 #!/bin/bash
 
 
-kubectl apply -f backend-deployment.yaml
-kubectl apply -f backend-service.yaml
+eval $(minikube docker-env)
+
+# Build da imagem do backend
+docker build -t devops/back ./backend
+
+# Build da imagem do frontend
+docker build -t devops/front ./frontend
 
 
-kubectl apply -f frontend-deployment.yaml
-kubectl apply -f frontend-service.yaml
+echo "Imagens construídas:"
+docker images | grep devops
 
-
-kubectl apply -f ingress.yaml
-
-echo "Aplicação implantada no Kubernetes (Minikube)!"
+echo "Build das imagens concluído!"
