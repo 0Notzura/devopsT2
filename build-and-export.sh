@@ -14,3 +14,4 @@ echo "Imagens construídas:"
 docker images | grep devops
 
 echo "Build das imagens concluído!"
+

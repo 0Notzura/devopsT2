@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-const apiUrl = 'http://backend.example.com/api'; 
+const apiUrl = 'http://backend.k8s.local';
 
   const authOptions = document.getElementById('authOptions');
   const authOptionsRegister = document.getElementById('showRegisterForm');
